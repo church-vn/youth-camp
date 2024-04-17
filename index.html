@@ -48,6 +48,18 @@ div.carousel-slider__item img {
 .elementor-element-5d09836 .elementor-widget-container {
 	border-radius: 40px !important;
 }
+
+/* header background */
+@keyframes ani {
+	0%{background-position: 0 0;}
+	100%{background-position: 100vw 0;}
+}
+/*.elementor-element-52aa052c .wp-block-cover.alignfull {
+	background: url(images/clouds.png) repeat-x 0 / 100% auto;
+	animation: ani 50s linear infinite ;
+	background-color: #000;
+}*/
+
 </style>
 	<link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min.css%3Fver=5.9.3.css' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -343,11 +355,11 @@ a.a_main:hover {
 
 <!-- wp:buttons {"contentJustification":"center"} -->
 <div class="wp-block-buttons is-content-justification-center"><!-- wp:button {"className":"is-style-primary"} -->
-<div class="wp-block-button is-style-primary"><a class="wp-block-button__link" href="index.html#anchor_documents">Контакты и документы</a></div>
+<div class="wp-block-button is-style-primary"><a style="border-style: none !important; padding-top: 10px; padding-bottom: 10px;" class="wp-block-button__link" href="#anchor_documents">Контакты и документы</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-secondary"} -->
-<div class="wp-block-button is-style-secondary"><a target="_blank" style="margin-top: 20px" class="wp-block-button__link" id="button_registration" href="https://docs.google.com/forms/d/e/1FAIpQLSf_XbAhx5GvKa0JwK02OOuAzFeU_nsdlVYWb44BT1_riLN8Tw/viewform" rel="noopener">Регистрация</a></div>
+<div class="wp-block-button is-style-secondary"><a target="_blank" style="margin-top: 20px; border-style: none !important;  padding-top: 10px; padding-bottom: 10px;" class="wp-block-button__link" id="button_registration" href="https://docs.google.com/forms/d/e/1FAIpQLSf_XbAhx5GvKa0JwK02OOuAzFeU_nsdlVYWb44BT1_riLN8Tw/viewform" rel="noopener">Регистрация</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 </div>						</div>
@@ -548,7 +560,7 @@ a.a_main:hover {
 <a class="a_main" href="documents/Анкета для участия в мероприятии.pdf" target="_blank" rel="noopener">Анкета участника</a> <!-- wp:buttons {"contentJustification":"center"} --></p>
 <div class="wp-block-buttons is-content-justification-center has-text-align-center"><!-- wp:button {"className":"is-style-primary"} -->
 
-<div style="margin-bottom: 20px;" class="wp-block-button is-style-primary"><a class="wp-block-button__link" href="documents/Пакет документов.zip" target="_blank" rel="noopener">Скачать все необходимые документы</a></div>
+<div style="margin-bottom: 20px;" class="wp-block-button is-style-primary"><a class="wp-block-button__link" href="documents/Пакет документов.zip" target="_blank" rel="noopener">Скачать все документы .zip</a></div>
 <!-- /wp:button --></div>
 
 <div class="wp-block-buttons is-content-justification-center has-text-align-center"><!-- wp:button {"className":"is-style-primary"} -->
