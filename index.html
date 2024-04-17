@@ -52,13 +52,22 @@ div.carousel-slider__item img {
 /* header background */
 @keyframes ani {
 	0%{background-position: 0 0;}
-	100%{background-position: 100vw 0;}
+	100%{background-position: -100vw 0;}
 }
 /*.elementor-element-52aa052c .wp-block-cover.alignfull {
 	background: url(images/clouds.png) repeat-x 0 / 100% auto;
 	animation: ani 50s linear infinite ;
 	background-color: #000;
 }*/
+.elementor-element-52aa052c .wp-block-cover.alignfull {
+	background: url(images/mountains3.jpg) repeat-x 0 / 100% auto;
+	animation: ani 100s linear infinite ;
+	border-radius: 40px !important;
+	background-size: cover !important;
+}
+.elementor-element-52aa052c .wp-block-cover.alignfull img {
+	display: none !important;
+}
 /* отступ третьего блока */
 .elementor-element-bb3d01e {
 	margin-top: 30px;
