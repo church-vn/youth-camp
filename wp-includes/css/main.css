@@ -151,7 +151,7 @@
 
 /* hidden item form */
 .hidden_form_item {
-  display: none !important;
+  display: none;
 }
 
 textarea::placeholder {
@@ -288,7 +288,7 @@ body.lock-scroll {
 
 /* Стили для уведомления (pop-up) */
 .popup-notification {
-  display: none !important; /* Скрыто по умолчанию */
+  display: none; /* Скрыто по умолчанию */
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -324,7 +324,7 @@ body.lock-scroll {
 
 /* Стили для уведомления (mainreg pop-up) */
 .mainreg-popup-notification {
-  display: none !important; /* Скрыто по умолчанию */
+  display: none; /* Скрыто по умолчанию */
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -484,3 +484,9 @@ body.lock-scroll {
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
+
+
+
+
+
+
