@@ -818,6 +818,12 @@ a.a_main:hover {
       <div class="label__text">Номер телефона родителя/законного представителя №2</div>
     </label>
 
+	  <label>
+	  <textarea id="sendAdditionalInfo_camp" name="additional-info" rows="3" style="resize: vertical;"></textarea>
+	  <div class="label__text">Укажите любую дополнительную информацию, которая поможет сделать пребывание ребенка на природе более комфортным</div>
+		</label>
+
+
     <div class="privacy_policy">
       Нажимая на кнопку "Отправить заявку", вы даете согласие на обработку персональных данных и соглашаетесь с
       <a href="documents/Soglasie_na_obrabotku_personalnykh_dannykh.pdf" target="_blank"><u>политикой конфиденциальности</u></a>.
@@ -873,10 +879,12 @@ a.a_main:hover {
       parent1Name: document.getElementById('sendParent1Name_camp').value,
       parent1Phone: document.getElementById('sendParent1Phone_camp').value.replace(/\D/g, ''),
       parent2Name: document.getElementById('sendParent2Name_camp').value,
-      parent2Phone: document.getElementById('sendParent2Phone_camp').value.replace(/\D/g, '')
+      parent2Phone: document.getElementById('sendParent2Phone_camp').value.replace(/\D/g, ''),
+      parent2Phone: document.getElementById('sendParent2Phone_camp').value.replace(/\D/g, ''),
+      additionalInfo: document.getElementById('sendAdditionalInfo_camp').value
     };
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyjxXXPIS9i9rJVMgi-pnBZJHf4do8vOfxpv7ItSeUl5kjsjP5mzdCtRrP4oHkPjsdR/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxqCsfiYznNSB-BLlIgjC0dDNDF-Ff5zlEc7pWsxQi4GatgJW0R-sZ0zS2gWqKZjFC5/exec';
 
     console.log(formData); // Добавьте логирование для проверки отправляемых данных
 
