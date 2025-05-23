@@ -503,7 +503,7 @@ body.lock-scroll {
      }
 /*   кнопка отправки в браузерах не видна при скроллинге с нижним сайдбаром  */
 #registrationForm {
-    padding-bottom: 60px !important;
+    padding-bottom: 90px !important;
 }
 }
 
