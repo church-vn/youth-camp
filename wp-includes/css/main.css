@@ -501,6 +501,10 @@ body.lock-scroll {
      .application-info_1 {
         margin: 20px auto !important;
      }
+/*   кнопка отправки в браузерах не видна при скроллинге с нижним сайдбаром  */
+#registrationForm {
+    padding-bottom: 60px !important;
+}
 }
 
 
@@ -513,4 +517,8 @@ body.lock-scroll {
 .elementor-element-33c4dab {
     padding-top: 30px !important;
 }
+
+
+
+
 
