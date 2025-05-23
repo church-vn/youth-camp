@@ -488,5 +488,29 @@ body.lock-scroll {
 
 
 
+/* уведомления application-info */
+@media screen and (max-width: 1240px) {
+    .application-info {
+        width: 90% !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .elementor-widget-icon-box, .application-info_2 {
+        margin: 10px auto !important;
+    }
+     .application-info_1 {
+        margin: 20px auto !important;
+     }
+}
 
+
+
+/* подвал footer */
+.elementor-element-349802a, .elementor-element-33c4dab {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+.elementor-element-33c4dab {
+    padding-top: 30px !important;
+}
 
