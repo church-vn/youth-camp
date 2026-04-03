@@ -29,7 +29,7 @@
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) scale(0) !important; 
-    background: #000000c1 !important;
+    background: #1F1F1F !important;
     width: 400px !important;
     padding: 25px !important;
     transition: 0.5s all !important;
@@ -452,7 +452,7 @@ body.lock-scroll {
 /* Блок с иконками */
 .elementor-widget-icon-box {
     padding-top: 30px !important;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: var(--boxshadow);
     border-radius: 20px !important;
     max-width: 24% !important;
     transition: 0.4s !important;
@@ -474,7 +474,7 @@ body.lock-scroll {
     padding-right: 10px !important;
 }
 #clarifications:hover {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: var(--boxshadow) !important;
 }
 
 
