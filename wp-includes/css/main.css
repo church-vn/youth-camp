@@ -300,15 +300,11 @@ body.lock-scroll {
   color: white !important;
   padding: 15px 20px !important;
   border-radius: 8px !important;
-  z-index: 9999 !important;
   text-align: left !important;
   width: 300px !important;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.mainreg-popup-notification {
-    z-index: 2 !important;
-}
 /*#mainregErrorPopup {
     display: block !important;
 }*/
