@@ -1056,8 +1056,8 @@ a.a_main:hover {
 <!-- Pop-up для успешной регистрации -->
 <div style="z-index:999999;" class="mainreg-popup-notification" id="mainregSuccessPopup">
   <div class="mainreg-popup-content">
-    <p>Заявка на участие прошла успешно! ✅<br><br>
-    Спасибо за регистрацию! Мы направим вам уведомление о модерации вашей заявки. 📧✨</p>
+    <p>Заявка на участие отправлена! ✅<br>
+    Ожидайте уведомление о модерации вашей заявки на <b>email</b>. 📧✨</p>
     <button class="mainreg-popup-close-btn" id="closeMainregSuccessPopup">Закрыть</button>
   </div>
 </div>
@@ -1070,8 +1070,17 @@ a.a_main:hover {
   </div>
 </div>
 
+<!-- Pop-up ожидания -->
+<div id="loadingPopup" class="popup-notification" style="z-index:1;">
+  <div class="popup-content">
+    <p>Отправка заявки...</p>
+    <div class="spinner"></div>
+  </div>
+</div>
+
 <script>
 
+// Преобразование даты
 	function formatDate(inputDate) {
   const date = new Date(inputDate);
   const day = String(date.getDate()).padStart(2, '0');
@@ -1080,10 +1089,20 @@ a.a_main:hover {
   return `${day}.${month}.${year}`; // формат DD.MM.YYYY
 }
 
+// Функция показа загрузочного pop-up на 5 секунд
+function showLoadingPopup() {
+  const loading = document.getElementById('loadingPopup');
+  loading.style.display = 'block';
 
+  setTimeout(() => {
+    loading.style.display = 'none';
+  }, 5000); // 5 секунд
+}
 
   document.getElementById('registrationForm').addEventListener('submit', function (event) {
     event.preventDefault();
+
+      showLoadingPopup();
 
     const formData = {
     	secondName: document.getElementById('sendSecondName_camp').value,

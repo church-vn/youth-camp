@@ -287,20 +287,31 @@ body.lock-scroll {
 
 
 /* Стили для уведомления (pop-up) */
-.popup-notification {
-  display: none; /* Скрыто по умолчанию */
+/* Общий стиль всех pop-up уведомлений */
+.popup-notification,
+.mainreg-popup-notification,
+#loadingPopup {
+  display: none;
   position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  top: 20px !important;       
+  right: 20px !important;     
+  transform: none !important; 
+  background-color: rgba(0, 0, 0, 1) !important;
   color: white !important;
-  padding: 20px !important;
+  padding: 15px 20px !important;
   border-radius: 8px !important;
   z-index: 9999 !important;
-  text-align: center !important;
+  text-align: left !important;
   width: 300px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+.mainreg-popup-notification {
+    z-index: 2 !important;
+}
+/*#mainregErrorPopup {
+    display: block !important;
+}*/
 
 .popup-content p {
   font-size: 16px !important;
@@ -322,22 +333,6 @@ body.lock-scroll {
 }
 
 
-/* Стили для уведомления (mainreg pop-up) */
-.mainreg-popup-notification {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  color: white !important;
-  padding: 20px !important;
-  border-radius: 8px !important;
-  z-index: 9999 !important;
-  text-align: center !important;
-  width: 300px !important;
-}
-
 .mainreg-popup-content p {
   font-size: 16px !important;
   margin-bottom: 20px !important;
@@ -356,6 +351,63 @@ body.lock-scroll {
 .mainreg-popup-close-btn:hover {
   background-color: #45a049 !important;
 }
+
+
+/* уведомления application-info */
+@media screen and (max-width: 1240px) {
+    .application-info {
+        width: 90% !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .elementor-widget-icon-box, .application-info_2 {
+        margin: 10px auto !important;
+    }
+     .application-info_1 {
+        margin: 20px auto !important;
+     }
+/*   кнопка отправки в браузерах не видна при скроллинге с нижним сайдбаром  */
+#registrationForm {
+    padding-bottom: 90px !important;
+}
+}
+
+
+/* Спиннер */
+.spinner {
+  display: block;
+  margin: 10px auto 0;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
+/* Подстраиваем popup под твою стилистику */
+#loadingPopup {
+  display: none;
+  position: fixed;
+  top: 20px !important;
+  right: 20px !important;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  font-size: 16px;
+  z-index: 1;
+}
+
 
 
 
@@ -486,26 +538,6 @@ body.lock-scroll {
 }
 
 
-
-
-/* уведомления application-info */
-@media screen and (max-width: 1240px) {
-    .application-info {
-        width: 90% !important;
-    }
-}
-@media screen and (max-width: 576px) {
-    .elementor-widget-icon-box, .application-info_2 {
-        margin: 10px auto !important;
-    }
-     .application-info_1 {
-        margin: 20px auto !important;
-     }
-/*   кнопка отправки в браузерах не видна при скроллинге с нижним сайдбаром  */
-#registrationForm {
-    padding-bottom: 90px !important;
-}
-}
 
 
 
