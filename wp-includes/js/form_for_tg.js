@@ -25,8 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const medication = document.getElementById("sendMedication_camp").value;
     const parent1 = document.getElementById("sendParent1Name_camp").value;
     const phone1 = document.getElementById("sendParent1Phone_camp").value;
+    const email1 = document.getElementById('sendEmail_camp1').value;
     const parent2 = document.getElementById("sendParent2Name_camp").value;
     const phone2 = document.getElementById("sendParent2Phone_camp").value;
+    const email2 = document.getElementById('sendEmail_camp2').value;
+
 
     const message = `
 🆕 Новая заявка на участие в лагере:
@@ -44,9 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 👨‍👩‍👧 Родитель 1: ${parent1}
 📞 Телефон 1: <a href="tel:${phone1}">${phone1}</a>
+✉️ Email: ${email1}
 
 👨‍👩‍👧 Родитель 2: ${parent2}
 📞 Телефон 2: <a href="tel:${phone2}">${phone2}</a>
+✉️ Email: ${email2}
+
     `;
 
     // Отправка в Telegram

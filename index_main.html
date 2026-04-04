@@ -54,10 +54,11 @@ div.carousel-slider__item img {
 /* header background */
 /* animation clouds + background */
 
-@keyframes ani {
+/* временное отключение анимации облаков */
+/*@keyframes ani {
 	0%{background-position: 0 0;}
 	100%{background-position: -100vw 0;}
-}
+}*/
 
 /*.elementor-element-52aa052c .wp-block-cover.alignfull {
 	background: url(images/clouds.png) repeat-x 0 / 100% auto;
@@ -942,7 +943,7 @@ a.a_main:hover {
   <form action="#" class="popup_camp scrollable-form" id="registrationForm" name="submit-to-google-sheet">
     <h4 style="color: white;">Заявка на участие</h4>
     <p style="color: white !important; font-size: 14px !important; line-height: 1.4rem !important;">⚠️ ВНИМАНИЕ! ⚠️ <br>📝 Данная форма регистрации — это <b>подача заявки</b> на участие
-(заявка будет рассмотрена администратором мероприятия, и вы получите ответ в ближайшее время по почте). После одобрения заявки вы сможете перейти к переводу добровольных пожертвований.</p>
+(заявка будет рассмотрена администратором мероприятия, и вы получите ответ в ближайшее время по email). После одобрения заявки вы сможете перейти к переводу добровольных пожертвований.</p>
 <p style="color: white !important; font-size: 12px !important; line-height: 1.2rem !important;">После нажатия на кнопку <b>"Отправить заявку"</b>, дождитесь когда появится уведомление о том, что форма заявки отправлена успешно (обычно втечение 5 секунд). Если никаких уведомлений не пришло, вероятнее всего причина в плохом соединении с интернетом. Тогда заполните форму еще раз. Спасибо!</p>
     <img src="images/close.svg" class="close-popup_camp">
 
@@ -1001,27 +1002,45 @@ a.a_main:hover {
 
     <label>
       <input id="sendParent1Name_camp" type="text" name="parent1-name" required>
-      <div class="label__text">ФИО (необходимо указать полные ФИО) родителя/законного представителя №1</div>
+      <div class="label__text">ФИО родителя/законного представителя №1 — пожалуйста, укажите полностью.</div>
     </label>
 
     <label>
       <input id="sendParent1Phone_camp" type="tel" name="parent1-phone" class="form-input" required>
-      <div class="label__text">Номер телефона родителя/законного представителя №1</div>
+      <div class="label__text">Номер телефона родителя №1 — пожалуйста, укажите актуальный номер.</div>
     </label>
 
     <label>
+    	<div style="font-size:12px; line-height: 18px; color:#ccc; margin-top:3px;">
+		    ⚠️ Важно! Убедитесь, что у вас есть доступ к этой почте — на нее будут приходить важные уведомления.
+		  </div>
+		  <input id="sendEmail_camp1" type="email" name="email1" required>
+		  <div class="label__text">Email родителя №1 — укажите точный адрес email.</div>
+		</label>
+
+    <label>
       <input id="sendParent2Name_camp" type="text" name="parent2-name" required>
-      <div class="label__text">ФИО (необходимо указать полные ФИО) родителя/законного представителя №2 (если есть или поставьте прочерк)</div>
+      <div class="label__text">ФИО родителя/законного представителя №2 — пожалуйста, укажите полностью. 
+    Если родитель отсутствует, введите повторно ФИО родителя №1.</div>
     </label>
 
     <label>
       <input id="sendParent2Phone_camp" type="tel" name="parent2-phone" class="form-input" required>
-      <div class="label__text">Номер телефона родителя/законного представителя №2 (если есть или введите тот же номер телефона)</div>
+      <div class="label__text">Номер телефона родителя №2 — пожалуйста, укажите актуальный номер. 
+    Если родитель отсутствует, повторите номер родителя №1.</div>
     </label>
+
+    <label>
+    	<div style="font-size:12px; line-height: 18px; color:#ccc; margin-top:3px;">
+		    ⚠️ Важно! Убедитесь, что у вас есть доступ к этой почте — на нее будут приходить важные уведомления.
+		  </div>
+		  <input id="sendEmail_camp2" type="email" name="email2" required>
+		  <div class="label__text">Email родителя №2 — укажите точный адрес email. Если родитель отсутствует, повторите Email родителя №1.</div>
+		</label>
 
 	  <label>
 	  <textarea id="sendAdditionalInfo_camp" name="additional-info" rows="3" style="resize: vertical;"></textarea>
-	  <div class="label__text">Укажите любую дополнительную информацию, которая поможет сделать пребывание ребенка на природе более комфортным</div>
+	  <div class="label__text">Укажите любую дополнительную информацию, которая поможет сделать пребывание ребенка на природе комфортным – пожалуйста, заполняйте подробно. Это важно для безопасности и удобства ребенка.</div>
 		</label>
 
 
@@ -1079,13 +1098,14 @@ a.a_main:hover {
       medication: document.getElementById('sendMedication_camp').value,
       parent1Name: document.getElementById('sendParent1Name_camp').value,
       parent1Phone: document.getElementById('sendParent1Phone_camp').value.replace(/\D/g, ''),
+      email1: document.getElementById('sendEmail_camp1').value,
       parent2Name: document.getElementById('sendParent2Name_camp').value,
       parent2Phone: document.getElementById('sendParent2Phone_camp').value.replace(/\D/g, ''),
-      parent2Phone: document.getElementById('sendParent2Phone_camp').value.replace(/\D/g, ''),
+      email2: document.getElementById('sendEmail_camp2').value,
       additionalInfo: document.getElementById('sendAdditionalInfo_camp').value
     };
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxqCsfiYznNSB-BLlIgjC0dDNDF-Ff5zlEc7pWsxQi4GatgJW0R-sZ0zS2gWqKZjFC5/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ6IZy2ZyN1Zo14qnJrWBj-Dq19Q1GSaBBPcFwTMMcsmuilBpm7JhAOJo2GREugSL-/exec';
 
     console.log(formData); // Добавьте логирование для проверки отправляемых данных
 
