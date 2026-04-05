@@ -261,11 +261,33 @@ div.privacy_policy {
     right: 10px !important;
     top: 67% !important;
     transform: translateY(-50%) !important;
-    color: #fcaf3b !important; /* Цвет иконки */
+    color: #fcaf3b !important; 
     cursor: pointer !important;
   }
 
 
+
+/* Стили для поля даты на всех устройствах */
+#birthDate_camp {
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 40px;           /* фиксированная высота */
+  padding: 6px 12px;      /* немного сверху, чтобы текст не центрировался */
+  box-sizing: border-box;
+  text-align: left;       /* текст слева */
+  -webkit-appearance: none; /* убираем дефолтное оформление iOS */
+  appearance: none;
+}
+
+/* Специально для iOS (iPhone) */
+@supports (-webkit-touch-callout: none) {
+  #birthDate_camp {
+    padding-top: 10px;    /* поднимаем текст ближе к верху */
+    padding-bottom: 4px;  /* убираем лишнее пространство снизу */
+  }
+}
 
 
 /* блокировка прокрутки при открытом popup */
@@ -273,10 +295,10 @@ body.lock-scroll {
     overflow: hidden !important;
 }
 
-#birthDate_camp {
+/*#birthDate_camp {
     font-size: 12px !important;
 }
-
+*/
 
 
 
