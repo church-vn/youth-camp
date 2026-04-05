@@ -305,6 +305,18 @@ body.lock-scroll {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* Подстраиваем popup под твою стилистику */
+#loadingPopup {
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  font-size: 16px;
+}
+
 /*#mainregErrorPopup {
     display: block !important;
 }*/
@@ -387,22 +399,6 @@ body.lock-scroll {
 
 
 
-/* Подстраиваем popup под твою стилистику */
-#loadingPopup {
-  display: none;
-  position: fixed;
-  top: 20px !important;
-  right: 20px !important;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0,0.85);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 250px;
-  font-size: 16px;
-  z-index: 1;
-}
 
 
 
