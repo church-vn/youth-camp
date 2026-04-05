@@ -273,7 +273,9 @@ body.lock-scroll {
     overflow: hidden !important;
 }
 
-
+#birthDate_camp {
+    font-size: 12px !important;
+}
 
 
 
@@ -588,50 +590,7 @@ body.lock-scroll {
 
 
 
-/* Стили для контейнера даты */
-.date-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* текст слева */
-  margin-bottom: 15px;
-  width: 100%;
-}
 
-.date-container input[type="date"] {
-  width: 100%;
-  padding: 8px 12px; /* внутренние отступы */
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  appearance: none; /* убираем дефолтные стили браузера */
-  -webkit-appearance: none;
-  text-align: left; /* текст слева */
-  height: 40px; /* фиксированная высота */
-  line-height: 1.2; /* пытаемся подвинуть текст вверх */
-}
 
-/* Для iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  .date-container input[type="date"] {
-    padding-top: 6px; /* чуть больше padding сверху */
-    padding-bottom: 6px; /* меньше снизу */
-    height: 40px; /* сохраняем высоту */
-  }
-}
 
-/* Иконка календаря */
-.calendar-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
 
-/* Подпись */
-.label__text {
-  font-size: 14px;
-  color: #555;
-  margin-top: 4px;
-}
