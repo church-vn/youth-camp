@@ -309,9 +309,6 @@ body.lock-scroll {
 #loadingPopup {
   transform: translate(-50%, -50%);
   background-color: rgba(0,0,0,0.85);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
   text-align: center;
   width: 250px;
   font-size: 16px;
