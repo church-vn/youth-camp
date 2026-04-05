@@ -358,26 +358,6 @@ body.lock-scroll {
 }
 
 
-/* уведомления application-info */
-@media screen and (max-width: 1240px) {
-    .application-info {
-        width: 90% !important;
-    }
-}
-@media screen and (max-width: 576px) {
-    .elementor-widget-icon-box, .application-info_2 {
-        margin: 10px auto !important;
-    }
-     .application-info_1 {
-        margin: 20px auto !important;
-     }
-/*   кнопка отправки в браузерах не видна при скроллинге с нижним сайдбаром  */
-#registrationForm {
-    padding-bottom: 90px !important;
-}
-}
-
-
 /* Спиннер */
 .spinner {
   display: block;
@@ -394,7 +374,47 @@ body.lock-scroll {
   to { transform: rotate(360deg); }
 }
 
+/* Адаптация под маленькие экраны до 320px */
+@media screen and (max-width: 320px) {
+  .popup-notification,
+  .mainreg-popup-notification,
+  #loadingPopup {
+    top: 10px !important;
+    right: 10px !important;
+    left: 10px !important;
+    width: auto !important;
+    padding: 12px 15px !important;
+    font-size: 14px !important;
+  }
 
+  .popup-content p,
+  .mainreg-popup-content p {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .popup-close-btn,
+  .mainreg-popup-close-btn {
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+}
+
+/* Подстраиваем popup загрузки (#loadingPopup) */
+#loadingPopup {
+  text-align: center !important;
+  width: 250px;
+  max-width: 90%;
+  font-size: 16px;
+  background-color: rgba(0,0,0,0.85);
+  z-index: 1; /* ниже успеха/ошибки */
+}
 
 
 
@@ -543,3 +563,75 @@ body.lock-scroll {
 
 
 
+
+
+
+/* уведомления application-info */
+/* Которые статичные таблички */
+@media screen and (max-width: 1240px) {
+    .application-info {
+        width: 90% !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .elementor-widget-icon-box, .application-info_2 {
+        margin: 10px auto !important;
+    }
+     .application-info_1 {
+        margin: 20px auto !important;
+     }
+/*   кнопка отправки в браузерах не видна при скроллинге с нижним сайдбаром  */
+#registrationForm {
+    padding-bottom: 90px !important;
+}
+}
+
+
+
+/* Стили для контейнера даты */
+.date-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* текст слева */
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.date-container input[type="date"] {
+  width: 100%;
+  padding: 8px 12px; /* внутренние отступы */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  appearance: none; /* убираем дефолтные стили браузера */
+  -webkit-appearance: none;
+  text-align: left; /* текст слева */
+  height: 40px; /* фиксированная высота */
+  line-height: 1.2; /* пытаемся подвинуть текст вверх */
+}
+
+/* Для iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .date-container input[type="date"] {
+    padding-top: 6px; /* чуть больше padding сверху */
+    padding-bottom: 6px; /* меньше снизу */
+    height: 40px; /* сохраняем высоту */
+  }
+}
+
+/* Иконка календаря */
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Подпись */
+.label__text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
