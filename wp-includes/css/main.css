@@ -254,7 +254,6 @@ div.privacy_policy {
   .date-container input[type="date"] {
     width: 100% !important;
   }
-
   .calendar-icon {
     width: 20px !important;
     position: absolute !important;
@@ -273,19 +272,19 @@ div.privacy_policy {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  height: 40px;           /* фиксированная высота */
-  padding: 6px 12px;      /* немного сверху, чтобы текст не центрировался */
+  height: 40px;        
+  padding: 6px 12px;      
   box-sizing: border-box;
-  text-align: left;       /* текст слева */
-  -webkit-appearance: none; /* убираем дефолтное оформление iOS */
+  text-align: left;      
+  -webkit-appearance: none; 
   appearance: none;
 }
 
 /* Специально для iOS (iPhone) */
 @supports (-webkit-touch-callout: none) {
   #birthDate_camp {
-    padding-top: 10px;    /* поднимаем текст ближе к верху */
-    padding-bottom: 4px;  /* убираем лишнее пространство снизу */
+    padding-top: 10px;   
+    padding-bottom: 4px; 
   }
 }
 
