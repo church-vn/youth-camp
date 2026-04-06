@@ -23,6 +23,25 @@ function checkFormValidity() {
     let sendParent1Phone = document.getElementById('sendParent1Phone_camp')?.value.trim() || "";
     let sendParent2Name = document.getElementById('sendParent2Name_camp')?.value.trim() || "";
     let sendParent2Phone = document.getElementById('sendParent2Phone_camp')?.value.trim() || "";
+    let sendEmail1 = document.getElementById('sendEmail_camp1')?.value.trim() || "";
+    let sendEmail2 = document.getElementById('sendEmail_camp2')?.value.trim() || "";
+
+
+
+     // Проверка на валидность email
+    if (!validateEmail(sendEmail1)) {
+        document.getElementById('sendEmail_camp1').setCustomValidity("Пожалуйста, введите корректный email.");
+    } else {
+        document.getElementById('sendEmail_camp1').setCustomValidity("");
+    }
+
+    if (!validateEmail(sendEmail2)) {
+        document.getElementById('sendEmail_camp2').setCustomValidity("Пожалуйста, введите корректный email.");
+    } else {
+        document.getElementById('sendEmail_camp2').setCustomValidity("");
+    }
+
+
 
     return (
         sendName &&
@@ -38,8 +57,15 @@ function checkFormValidity() {
         sendParent1Name &&
         sendParent1Phone &&
         sendParent2Name &&
-        sendParent2Phone
+        sendParent2Phone &&
+        sendEmail1 && sendEmail2
     );
+}
+
+// Функция для валидации email
+function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailPattern.test(email);
 }
 
 // Функция для блокировки прокрутки
