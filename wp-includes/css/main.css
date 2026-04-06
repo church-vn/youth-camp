@@ -620,3 +620,17 @@ body.lock-scroll {
 
 
 
+
+
+
+/* Центрирование текста */
+.text_center {
+    text-align: center !important;
+}
+
+
+.section_style {
+    margin-top: 60px !important;
+}
+
+
