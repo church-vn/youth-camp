@@ -289,6 +289,10 @@ div.privacy_policy {
   }
 }
 
+#birthDate_camp {
+    resize: none !important;       /* убираем возможность тянуть */
+    overflow: hidden !important;   /* скрываем полоску */
+}
 
 /* блокировка прокрутки при открытом popup */
 body.lock-scroll {
