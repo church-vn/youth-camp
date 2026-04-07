@@ -62,7 +62,7 @@
 
 .popup_camp .label__text {
     font-size: 14px !important;
-    font-weight: 300 !important;
+    font-weight: 500 !important;
     color: #cfd0d3 !important;
     margin-bottom: 5px !important;
     line-height: 20px !important;
@@ -142,6 +142,8 @@
     color:#fff !important;
     transition: 0.5s all !important;
 }
+
+
 /* ============== */
 /* end popup_camp*/
 /* ============== */
@@ -654,3 +656,17 @@ body.lock-scroll {
     padding-left: 20px !important;
     padding-right: 20px !important;
 }*/
+
+
+
+
+
+
+
+
+
+
+
+body, h1, h2, h3, h4, h5, h6, p, li, a, button, .btn, .text {
+    font-family: "Helvetica", "Poppins", "Arial", sans-serif !important;
+}
