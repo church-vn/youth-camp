@@ -630,11 +630,16 @@ body.lock-scroll {
 
 
 .section_style {
-    margin-top: 60px !important;
+    margin-top: 40px !important;
 }
 
 
 
+
+
+.heading_style {
+    margin-bottom: 0px;
+}
 
 
 
