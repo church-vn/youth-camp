@@ -780,7 +780,6 @@ a.a_main:hover {
 </section>
 
 <style>
-
 	.swiper-wrapper {
 		padding-bottom: 30px !important;
 	}
@@ -794,7 +793,7 @@ a.a_main:hover {
     object-fit: contain;
     border-radius: 20px;
     transition: transform 0.3s;
-    outline: none !important;
+    outline: none !important; 
   }
 
   .slider-works a:hover img {
@@ -833,6 +832,30 @@ a.a_main:hover {
     left: 50% !important;
     transform: translateX(-50%);
   }
+
+  .slider-works img:focus {
+  outline: none !important;
+	}
+	a:visited {
+	  outline: none;
+	}
+	.slider-works img:focus {
+	  outline: none !important;
+	}
+
+.slider-works img:focus, 
+.slider-works img:active {
+  outline: none !important;
+}
+
+a:focus, 
+a:active {
+  outline: none !important;
+}
+
+a:visited {
+  outline: none;
+}
 </style>
 
 
