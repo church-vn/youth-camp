@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<!-- Стили Fancybox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+<!-- Скрипт Fancybox -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+</head>
+<body>
+
+
+
+
+  <section class="carousel-section">
+  <div class="slider-works">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Слайды -->
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_5.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_5.jpeg" alt="Фото 1">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_6.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_6.jpeg" alt="Фото 2">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_3.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_3.jpeg" alt="Фото 3">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_7.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_7.jpeg" alt="Фото 4">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_2022-05-18-10.56.11-768x576.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_2022-05-18-10.56.11-768x576.jpeg" alt="Фото 5">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_2022-05-18-10.56.03-768x576.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_2022-05-18-10.56.03-768x576.jpeg" alt="Фото 6">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_2022-05-18-10.56.18-768x576.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_2022-05-18-10.56.18-768x576.jpeg" alt="Фото 7">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_2022-05-18-10.56.16-768x576.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_2022-05-18-10.56.16-768x576.jpeg" alt="Фото 8">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_2022-05-18-10.55.53-e1681138059558-768x576.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_2022-05-18-10.55.53-e1681138059558-768x576.jpeg" alt="Фото 9">
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="wp-content/uploads/2022/05/photo_2022-05-18-10.56.14-768x576.jpeg" data-fancybox="gallery">
+            <div class="carousel-slide">
+              <img src="wp-content/uploads/2022/05/photo_2022-05-18-10.56.14-768x576.jpeg" alt="Фото 10">
+            </div>
+          </a>
+        </div>
+        <!-- Добавь другие слайды, если нужно -->
+      </div>
+
+      <!-- Навигация -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- Пагинация -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .swiper-wrapper {
+    padding-bottom: 30px !important;
+    gap: 20px !important;
+  }
+  
+  .carousel-section {
+    padding: 40px 0;
+  }
+
+  .slider-works img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    outline: none !important;
+  }
+
+  .slider-works a:hover img {
+    transform: none;
+  }
+
+  /* Настройки для кнопок */
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #d3ae8d;
+  }
+
+  /* Пагинация */
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+</style>
+
+
+
+
+<!-- carousel карусель -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper('.slider-works .swiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  });
+</script>
+
+<!-- carousel карусель fancybox -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Инициализация Fancybox
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    // Основные опции:
+    loop: true, // Зацикливает галерею (по умолчанию true)
+    arrows: true, // Показывать стрелки для навигации (по умолчанию true)
+    infobar: true, // Показывать инфобар с номером текущего изображения (по умолчанию true)
+    toolbar: true, // Показывать панель инструментов с кнопками (по умолчанию true)
+    buttons: ['zoom', 'close'], // Кнопки в панели инструментов (по умолчанию: 'zoom', 'share', 'download', 'close')
+    transitionEffect: 'fade', // Эффект перехода между слайдами: 'fade' или 'slide' (по умолчанию 'fade')
+    transitionDuration: 500, // Продолжительность анимации перехода в миллисекундах (по умолчанию 366)
+
+    // Автоматическое закрытие при клике на затемненную область
+    closeClick: 'outside', // Закрывать при клике вне модального окна (по умолчанию 'inside')
+
+    // Поддержка клавиш:
+    keyboard: true, // Включить поддержку клавиш (стрелки для навигации и Esc для закрытия) (по умолчанию true)
+    
+    // Поддержка увеличения:
+    zoom: true, // Включить эффект зума на изображениях (по умолчанию true)
+    
+    // Поддержка галереи:
+    gallery: {
+      enabled: true, // Включить галерею (по умолчанию true)
+      preload: [1, 2], // Сколько изображений загружать до и после текущего слайда (по умолчанию [0, 3])
+      navigateByMouse: true, // Навигация с помощью мыши (по умолчанию true)
+    },
+    
+    // Функции управления курсором
+    closeButton: 'top', // Позиция кнопки закрытия (по умолчанию 'top', можно поставить 'bottom')
+    placeFocusBack: true, // Вернуть фокус на элемент после закрытия модального окна (по умолчанию true)
+
+    // Ссылки для captions
+    caption: function (fancybox, carousel, slide) {
+      return slide.caption || ''; // Показывать caption из data-caption, если оно есть
+    },
+
+    // Поведение слайдера:
+    preload: 2, // Количество изображений, которые загружаются до и после активного
+    infinite: true, // Бесконечный цикл (по умолчанию true)
+
+    // Настройка авто-закрытия
+    autoplay: false, // Автопроигрывание (по умолчанию false)
+
+    // Настройки анимации
+    transitionEffect: 'fade', // Эффект анимации между изображениями: 'fade' (плавное затухание) или 'slide' (перемещение)
+    transitionDuration: 500, // Время анимации перехода (по умолчанию 366)
+    
+    // Разное
+    thumbs: {
+      autoStart: false, // Включить миниатюры (по умолчанию false)
+      hideOnClose: true, // Скрывать миниатюры при закрытии галереи
+    },
+
+    // Элементы управления и их видимость
+    fullScreen: {
+      autoStart: true, // Включать полноэкранный режим сразу после открытия (по умолчанию false)
+    },
+
+    // Визуальные эффекты
+    dragToClose: true, // Включить перетаскивание для закрытия (по умолчанию true)
+  });
+});
+</script>
+
+</body>
+</html>
