@@ -103,7 +103,7 @@ function showLoadingPopup() {
 
     setTimeout(() => {
         loading.style.display = 'none';
-    }, 5000); // 5 секунд
+    }, 7000); // 7 секунд
 }
 
 // Функция для показа pop-up
