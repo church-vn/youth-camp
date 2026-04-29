@@ -103,7 +103,7 @@ function showLoadingPopup() {
 
     setTimeout(() => {
         loading.style.display = 'none';
-    }, 7000); // 7 секунд
+    }, 5000); // 5 секунд
 }
 
 // Функция для показа pop-up
@@ -196,7 +196,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         additionalInfo: document.getElementById('sendAdditionalInfo_camp').value
     };
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz72MreCPdtebPSXLtWzH1Qo1W3FqS1U8DmQWERPn4_MM8VJRZ3pQPmGtiB7uja8GVb/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrSN2n0Ur5okwU9KZqpRel_o8xMj5RpNBymdgt5fuX40SOdn5spAgwubjxP5zXh2jBEg/exec';
 
     console.log(formData); // Добавьте логирование для проверки отправляемых данных
 
