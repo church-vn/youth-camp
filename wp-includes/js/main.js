@@ -196,7 +196,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         additionalInfo: document.getElementById('sendAdditionalInfo_camp').value
     };
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ6IZy2ZyN1Zo14qnJrWBj-Dq19Q1GSaBBPcFwTMMcsmuilBpm7JhAOJo2GREugSL-/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwV9qmIxUZxzk-x2MBLSPvW-kGuujNY7IseZWcQ-kw7E6_mtFVBMAXu60ti_p8dhLXP/exec';
 
     console.log(formData); // Добавьте логирование для проверки отправляемых данных
 
